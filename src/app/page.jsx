@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./globals.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
   Navigation,
@@ -9,7 +10,6 @@ import {
   Scrollbar,
   A11y,
 } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
 const Home = () => {
@@ -23,6 +23,7 @@ const Home = () => {
     setIsMenuOpen(false);
   };
 
+  //to remove menu on scrolling out
   useEffect(() => {
     const handleScroll = () => {
       closeMenu();
@@ -54,17 +55,13 @@ const Home = () => {
   return (
     <>
       <header className="header">
-        <Link href="#home" className="logo-link">
+        <Link href="/" className="logo-link">
           <div>
             <span className="logo-area">KEN</span>
-            <span className="logo-part">NETH</span>
+            <span className="logo-part">DEVELOPS</span>
           </div>
         </Link>
-        <div
-          className={`bx ${isMenuOpen ? "bx-x" : ""}`}
-          id="menu-icon"
-          onClick={toggleMenu}
-        >
+        <div id="menu-icon" onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -79,7 +76,7 @@ const Home = () => {
         </div>
         <ul className={`navlist ${isMenuOpen ? "active" : ""}`}>
           <li>
-            <Link href="index.html">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
             <Link href="#about">My Resume</Link>
@@ -96,15 +93,15 @@ const Home = () => {
         </ul>
       </header>
       <section className="header2" style={{ position: "fixed" }}>
-        <Link href="#home" className="logo-link2">
+        <Link href="/" className="logo-link2">
           <div>
             <span className="logo-area">KEN</span>
-            <span className="logo-part">NETH</span>
+            <span className="logo-part">DEVELOPS</span>
           </div>
         </Link>
         <ul className="navlist2">
           <li>
-            <Link href="index.html">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
             <Link href="#about">My Resume</Link>
@@ -116,12 +113,21 @@ const Home = () => {
             <Link href="#contact">Contact Me</Link>
           </li>
           <li>
-            <Link href="#contact">
+            <div
+              onClick={() => {
+                window.open(
+                  "https://github.com/kennethnnabuife",
+                  "_blank",
+                  "noopener noreferrer"
+                );
+              }}
+              style={{ cursor: "pointer" }}
+            >
               <img
                 style={{ width: "25px", height: "25px" }}
                 src="https://res.cloudinary.com/dynmdbdfu/image/upload/v1715588576/github-mark-white_vlt9kl.png"
               />
-            </Link>
+            </div>
           </li>
         </ul>
       </section>
@@ -227,10 +233,19 @@ const Home = () => {
         </div>
       </section>
       <section className="about" id="about">
-        <Link href="" className="about-contact-div">
+        <div
+          onClick={() => {
+            window.open(
+              "https://res.cloudinary.com/dynmdbdfu/image/upload/v1717300800/ken_cv_v10eyp.pdf",
+              "_blank"
+            );
+          }}
+          style={{ cursor: "pointer" }}
+          className="about-contact-div"
+        >
           <div className="about-contact">Click to Download Resume</div>
           {/*<box-icon name="right-top-arrow-circle" className="arrow-about"></box-icon>*/}
-        </Link>
+        </div>
         <div className="service-head">Core Skills</div>
         <h1 className="h1h1">
           <div className="skills">
@@ -241,12 +256,12 @@ const Home = () => {
       </section>
       <section className="services">
         <div className="service-right" id="services">
-          Our Services
+          My Works
         </div>
         <div className="h1h1">
           <div className="sub-service-right">
-            We offer full digital services including Web development, Search
-            engine optimization and Digital marketing...
+            I've successfully built and deployed various Fontend and Fullstack
+            web applications...
             <Link href="#cards" style={{ color: "#000", fontWeight: 500 }}>
               Explore
             </Link>
@@ -254,54 +269,74 @@ const Home = () => {
         </div>
         <div className="cards" id="cards">
           <div className="icon-box">
-            <img src="/Images/webdev-sabiweb.svg" alt="Sabiweb - Web design" />
-            <div className="icon-box-head">Web development</div>
-            <p>
-              We have the best technical team you can find, specialized in areas
-              such as: <br />
-              Blogs and Personal websites, Business and Corporate websites, and
-              E-commerce websites.
-            </p>
-            <div className="service-contact-div">
-              <Link href="#contact" className="view-contact">
-                Contact Us
-              </Link>
+            <div className="work-img-div">
+              <div
+                className="background-st"
+                onClick={() =>
+                  window.open(
+                    "https://marshallswears.co.uk",
+                    "_blank",
+                    "noopener noreferrer"
+                  )
+                }
+              >
+                View Site
+              </div>
+              <img src="https://res.cloudinary.com/dynmdbdfu/image/upload/v1717296692/Screenshot_2024-06-02_035006_lwoyhq.png" />
             </div>
           </div>
+
           <div className="icon-box">
-            <img
-              src="/Images/seo-sabiweb.svg"
-              alt="search engine optimization - sabiweb"
-            />
-            <div className="icon-box-head">Search Engine Optimization</div>
-            <p>
-              To improve the appearance of your website in search results, we
-              implement on-page SEO techniques. However, when you purchase any
-              of our web development packages, you automatically get SEO
-              implemented.
-            </p>
-            <div className="service-contact-div">
-              <Link href="#contact" className="view-contact">
-                Contact Us
-              </Link>
+            <div className="work-img-div">
+              <div
+                className="background-st"
+                onClick={() =>
+                  window.open(
+                    "https://connectbingo.com",
+                    "_blank",
+                    "noopener noreferrer"
+                  )
+                }
+              >
+                View Site
+              </div>
+              <img src="https://res.cloudinary.com/dynmdbdfu/image/upload/v1717296714/Screenshot_2024-06-02_034938_bljh0b.png" />
             </div>
           </div>
+
           <div className="icon-box">
-            <img
-              src="/Images/digital-sabiweb.svg"
-              alt="digital-marketing-sabiweb"
-            />
-            <div className="icon-box-head">Digital marketing</div>
-            <p>
-              We've developed strategic methods to organically promote your
-              products and services on various digital platforms including
-              Social Media, E-mails and Search Engines through CPC, CPM, SEO,
-              and SMM.
-            </p>
-            <div className="service-contact-div">
-              <Link href="#contact" className="view-contact">
-                Contact Us
-              </Link>
+            <div className="work-img-div">
+              <div
+                className="background-st"
+                onClick={() =>
+                  window.open(
+                    "https://votegreenproducts.com",
+                    "_blank",
+                    "noopener noreferrer"
+                  )
+                }
+              >
+                View Site
+              </div>
+              <img src="https://res.cloudinary.com/dynmdbdfu/image/upload/v1717296714/Screenshot_2024-06-02_035052_r5rchk.png" />
+            </div>
+          </div>
+
+          <div className="icon-box">
+            <div className="work-img-div">
+              <div
+                className="background-st"
+                onClick={() =>
+                  window.open(
+                    "https://cyooner.com",
+                    "_blank",
+                    "noopener noreferrer"
+                  )
+                }
+              >
+                View Site
+              </div>
+              <img src="https://res.cloudinary.com/dynmdbdfu/image/upload/v1717296706/Screenshot_2024-06-02_035107_q0hvjd.png" />
             </div>
           </div>
         </div>
@@ -317,18 +352,21 @@ const Home = () => {
         <div className="desktop-flex-2">
           <div className="info-img-div">
             <img
-              src="/Images/web-development-nigeria.jpg"
+              src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Build a website in Nigeria"
               className="sabidev2"
             />
           </div>
           <div className="second-info-div">
-            <div className="info-header">I'll give your site a modern look</div>
+            <div className="info-header">
+              I'll give your application a modern look
+            </div>
             <div className="info-content">
               <p className="info-p">
-                At SabiWeb, we combine skilled and creative talents to produce
-                jaw-dropping websites, with modern looks, from the user
-                interface to a fantastic user experience.
+                I create modern, high-performing web applications. From
+                intuitive user interfaces to seamless experiences, I will
+                combine my skills to bring your vision to life. Let’s build
+                something amazing together.
               </p>
             </div>
           </div>
@@ -337,31 +375,35 @@ const Home = () => {
       <section className="contact-section">
         <div className="contact-desktop">
           <div className="mini-end" id="contact">
-            Need help building your website?
+            Wanna give me a try?
           </div>
           <div className="mini-end-contact-div">
             <Link href="#contact" className="contact">
-              <div className="contact-text">Contact Us</div>
+              <div className="contact-text">Contact Me</div>
             </Link>
           </div>
           <div className="small-contact-div">
             <div className="call-div">
-              <i className="bx bx-phone-call contact-icons"></i>
               <Link href="tel:+2347030597812" className="call-space">
-                07030597812
+                07918294971
               </Link>
             </div>
             <div className="email-div">
-              <i className="bx bx-envelope contact-icons"></i>
-              <Link href="mailto:info@sabiweb.com" className="call-space">
-                info@sabiweb.com
+              <Link
+                href="mailto:nnabuifekenneth766@gmail.com"
+                className="call-space"
+              >
+                nnabuifekenneth766@gmail.com
               </Link>
             </div>
           </div>
         </div>
         <div className="big-contact-div">
           <div className="form-header">Send us a message</div>
-          <form action="https://formsubmit.co/info@sabiweb.com" method="POST">
+          <form
+            action="https://formsubmit.co/nnabuifekenneth766@gmail.com"
+            method="POST"
+          >
             <input
               type="text"
               className="form-control"
@@ -397,10 +439,9 @@ const Home = () => {
       </section>
       <section>
         <div className="credit-div">
-          <Link href="" className="sabiweb-link">
-            Developed by <span className="sabi">&nbsp;SABI</span>
-            <span className="web">WEB</span>
-          </Link>
+          <div href="" className="sabiweb-link">
+            Developed by <span className="sabi">&nbsp;KEN</span>
+          </div>
         </div>
       </section>
     </>

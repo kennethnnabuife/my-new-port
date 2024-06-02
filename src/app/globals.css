@@ -137,7 +137,7 @@ body {
   height: auto;
   padding-left: 24px;
   padding-right: 24px;
-  padding-top: 28px;
+  padding-top: 58px;
   padding-bottom: 20px;
 }
 
@@ -150,7 +150,7 @@ body {
   background: var(--blue-color);
   width: 100%;
   height: auto;
-  padding-bottom: 14px;
+  padding-bottom: 34px;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -230,7 +230,7 @@ body {
 .contact-div {
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 22px;
+  padding-bottom: 32px;
   background: var(--blue-color);
 }
 
@@ -346,23 +346,58 @@ body {
 }
 
 .cards {
-  padding: 0px 20px;
-  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+  align-items: center;
 }
 
 .icon-box {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 30px;
   transition: all ease-in-out 0.4s;
-  margin: 15px 0px;
+  margin: 30px 10px;
   border-radius: 15px;
   background: var(--blue-color);
+  height: 280px;
+  width: 335px;
+}
+.work-img-div {
+  height: 280px;
+  width: 335px;
+}
+.work-img-div img {
+  object-fit: cover;
+  position: center;
+  height: 280px;
+  width: 335px;
+  border-radius: 15px;
 }
 
-.icon-box img {
-  width: 30%;
+.background-st {
+  position: absolute;
+  height: 280px;
+  width: 335px;
+  background: #0e0f1da4;
+  color: #fff;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 34%;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.background-st:hover {
+  text-align: center;
+  transition: all 0.4s ease;
+  position: absolute;
+  height: 280px;
+  width: 335px;
+  font-weight: 600;
+  background: #0e0f1dc7;
+  border-radius: 15px;
 }
 
 .icon-box-head {
@@ -412,7 +447,9 @@ body {
 }
 
 .sabidev2 {
-  width: 85%;
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
 
@@ -484,12 +521,16 @@ body {
 }
 
 .call-space {
-  padding-left: 15px;
   font-size: var(--bodyfont-size);
   color: var(--blue-color);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .email-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding-top: 5px;
 }
 
@@ -774,6 +815,10 @@ body {
     padding-bottom: 10px;
   }
 
+  .sub-service-right {
+    text-align: center;
+  }
+
   .skills {
     letter-spacing: 4px;
     font-weight: 600;
@@ -782,14 +827,55 @@ body {
   .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-left: 100px;
     padding-right: 100px;
+    align-items: center;
   }
 
   .icon-box {
-    margin: 5px;
-    width: 300px;
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.4s;
+    margin: 30px 10px;
+    border-radius: 15px;
+    background: var(--blue-color);
+    height: 280px;
+    width: 500px;
+  }
+  .work-img-div {
+    height: 280px;
+    width: 500px;
+  }
+  .work-img-div img {
+    object-fit: cover;
+    position: center;
+    height: 280px;
+    width: 500px;
+    border-radius: 15px;
+  }
+
+  .background-st {
+    position: absolute;
+    height: 280px;
+    width: 500px;
+    background: #0e0f1da4;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    border-radius: 15px;
+  }
+
+  .background-st:hover {
+    text-align: center;
+    transition: all 0.4s ease;
+    position: absolute;
+    height: 280px;
+    width: 500px;
+    background: #0e0f1dc7;
+    border-radius: 15px;
   }
 
   .desktop-flex-2 {
