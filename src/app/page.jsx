@@ -236,7 +236,7 @@ const Home = () => {
         <div
           onClick={() => {
             window.open(
-              "https://res.cloudinary.com/dynmdbdfu/image/upload/v1717300800/ken_cv_v10eyp.pdf",
+              "https://res.cloudinary.com/dynmdbdfu/image/upload/v1717340499/1._Kenneth_s_Standard_Resume_-_global.pdf_tf4suc.pdf",
               "_blank"
             );
           }}
@@ -249,8 +249,8 @@ const Home = () => {
         <div className="service-head">Core Skills</div>
         <h1 className="h1h1">
           <div className="skills">
-            JavaScript | React.js | ReactNative | TypeScript | Express.js |
-            Node.js | MongoDB | PHP | SQL
+            JavaScript | React.js | Next.js | ReactNative | TypeScript |
+            Express.js | Node.js | MongoDB | PHP | SQL
           </div>
         </h1>
       </section>
